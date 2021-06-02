@@ -1,0 +1,13 @@
+Program Code : COVID_OFFICE_R1
+
+Project Code : Fiene
+
+Sr. No.	Test Case Description	Owner	Project Team Name	No Of Steps	StepsCompleted	FullyExecutedFlag	BuildComplete	ScriptsWritten	System Readiness	Process Readiness	People Readiness	Comments	
+1	Machine Learning prediction of COVID deaths per 100k by county in Tableau	Fiene	1	1	1	Yes	Yes	No	Yes	Yes	Yes		
+2	Machine Learning prediction of COVID deaths by county in Tableau	Fiene	1	1	1	Yes	Yes	No	Yes	Yes	Yes		
+3	Machine Learning prediction of COVID positives per 100k in Tableau	Fiene	1	1	1	Yes	Yes	No	Yes	Yes	Yes		
+4	Machine Learning prediction of COVID Cases in Tableau	Fiene	1	1	1	Yes	Yes	No	Yes	Yes	Yes		
+5	Treemap in Tableau showing counties by size of economic activity and color by predicted deaths per 100k	Fiene	1	1	1	Yes	Yes	No	Yes	Yes	Yes		
+6	Geographical State map in Tableau showing each county with a color	Fiene	1	1	1	Yes	Yes	No	Yes	Yes	Yes		
+7	Tripwire Hypothesis Test that triggers response plans for a county of your choice showing weekly mortality.	Fiene	1	1	1	Yes	Yes	No	Yes	Yes	Yes		
+8	Tripwire Hypothesis Test triggering a warning of hospitalizations reaching capacity	Fiene	1	1	1	Yes	Yes	No	Yes	Yes	Yes		

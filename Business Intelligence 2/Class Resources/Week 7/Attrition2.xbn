@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<ANALYSISNOTEBOOK NAME="Notebook.bndefault" ROOT="bndefault">
+  <BNMODEL NAME="bndefault"><STATICPROPERTIES><FORMAT>MSR DTAS XML</FORMAT>
+        <VERSION>1.0</VERSION>
+        <CREATOR>Microsoft Research DTAS</CREATOR>
+        </STATICPROPERTIES>
+      <DYNAMICPROPERTIES><PROPERTYTYPE NAME="DTASDG_Notes" TYPE="stringarray"><COMMENT>Notes on the diagram</COMMENT>
+          </PROPERTYTYPE>
+        <PROPERTYTYPE NAME="MS_Addins" TYPE="stringarray"/>
+        <PROPERTYTYPE NAME="MS_Asym" TYPE="string"><COMMENT>Asymmetric assessment information stored as a string</COMMENT>
+          </PROPERTYTYPE>
+        <PROPERTY NAME="DTASDG_Notes"><PROPVALUE><![CDATA[[0,-529,9287\] ]]></PROPVALUE>
+          </PROPERTY>
+        </DYNAMICPROPERTIES>
+      <VARIABLES><VAR NAME="Attrition_Cost_Per_Hire" TYPE="discrete" XPOS="14685" YPOS="688"><FULLNAME>Cost</FULLNAME>
+          <STATENAME>-$30,000</STATENAME>
+          <STATENAME>$0</STATENAME>
+          </VAR>
+        <VAR NAME="Competent_In_Hired_Role" TYPE="discrete" XPOS="4974" YPOS="9207"><FULLNAME>Competent</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="Good_Hire" TYPE="discrete" XPOS="14845" YPOS="4340"><FULLNAME>Good_Hire</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="Promotable" TYPE="discrete" XPOS="24898" YPOS="9234"><FULLNAME>Promotable</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="Will_Stay" TYPE="discrete" XPOS="15003" YPOS="9074"><FULLNAME>Will_Stay</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        </VARIABLES>
+      <STRUCTURE><ARC PARENT="Good_Hire" CHILD="Attrition_Cost_Per_Hire"/>
+        <ARC PARENT="Competent_In_Hired_Role" CHILD="Good_Hire"/>
+        <ARC PARENT="Will_Stay" CHILD="Good_Hire"/>
+        <ARC PARENT="Promotable" CHILD="Good_Hire"/>
+        </STRUCTURE>
+      <DISTRIBUTIONS><DIST TYPE="discrete"><CONDSET><CONDELEM NAME="Good_Hire"/>
+            </CONDSET>
+          <PRIVATE NAME="Attrition_Cost_Per_Hire"/>
+          <DPIS><DPI INDEXES="0 ">0 1 </DPI>
+            <DPI INDEXES="1 ">1 0 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><PRIVATE NAME="Competent_In_Hired_Role"/>
+          <DPIS><DPI>0.7 0.3 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="Competent_In_Hired_Role"/>
+            <CONDELEM NAME="Will_Stay"/>
+            <CONDELEM NAME="Promotable"/>
+            </CONDSET>
+          <PRIVATE NAME="Good_Hire"/>
+          <DPIS><DPI INDEXES="0 0 0 ">0.98 0.02 </DPI>
+            <DPI INDEXES="0 0 1 ">0.85 0.15 </DPI>
+            <DPI INDEXES="0 1 0 ">0.7 0.3 </DPI>
+            <DPI INDEXES="0 1 1 ">0.55 0.45 </DPI>
+            <DPI INDEXES="1 0 0 ">0.02 0.98 </DPI>
+            <DPI INDEXES="1 0 1 ">0.01 0.99 </DPI>
+            <DPI INDEXES="1 1 0 ">0.01 0.99 </DPI>
+            <DPI INDEXES="1 1 1 ">0 1 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><PRIVATE NAME="Promotable"/>
+          <DPIS><DPI>0.2 0.8 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><PRIVATE NAME="Will_Stay"/>
+          <DPIS><DPI>0.84 0.16 </DPI>
+            </DPIS>
+          </DIST>
+        </DISTRIBUTIONS>
+      </BNMODEL>
+    </ANALYSISNOTEBOOK>
