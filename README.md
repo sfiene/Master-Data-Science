@@ -1,5 +1,5 @@
-# Master-Data-Science
----
+# Master Data Science
+
 ## Table of Contents
 
 1. [Advanced Data Mining](https://github.com/sfiene/Master-Data-Science/tree/main/Advanced%20Data%20Mining)
